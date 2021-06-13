@@ -1,4 +1,5 @@
 module mux4(out, in, sel);
+
     input [3:0] in;
     input [1:0] sel;
     output out;
