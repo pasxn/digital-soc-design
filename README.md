@@ -1,2 +1,2 @@
 # digital-vlsi-design
-Digital VLSI design roadmap
+Studying digital VLSI design roadmap
