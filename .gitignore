@@ -1,0 +1,4 @@
+# synthesis extensions
+*.txt
+*.vcd
+*.vvp
