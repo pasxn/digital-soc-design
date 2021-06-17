@@ -1,7 +1,7 @@
 module counter 
         #(parameter COUNTER_WIDTH = 4)
-        (clk, rst_n, act, up_dwn_n, count, ovflw); // system clock | an active low reset | the activate signal | count up ? 1 : 0
-
+        (clk, rst_n, act, up_dwn_n, count, ovflw);
+        // system clock | an active low reset | the activate signal | count up ? 1 : 0
     input clk;
     input rst_n;
     input act;
