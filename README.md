@@ -1,2 +1,2 @@
 # Digital-SoC-Design
-Studying digital SoC design roadmap
+Studying SoC design roadmap
