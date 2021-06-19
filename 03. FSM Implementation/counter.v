@@ -70,6 +70,7 @@ module counter
           $display("%t: state machine not initialized\n", $time);  
         end
       endcase
+    
 
     always@(posedge clk or negedge rst_n) 
       if (!rst_n)
