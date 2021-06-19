@@ -2,3 +2,6 @@
 *.txt
 *.vcd
 *.vvp
+
+# vivado
+/vivado
