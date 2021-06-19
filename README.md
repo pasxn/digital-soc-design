@@ -1,2 +1,2 @@
-# Digital-SoC-Design
-Studying SoC design roadmap
+# RTL Design and Verification
+RTL design and verification roadmap
