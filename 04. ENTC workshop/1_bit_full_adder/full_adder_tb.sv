@@ -16,4 +16,35 @@
      logic sum;
      logic c_out;
      
+     full_adder(.*);
+     
+     initial begin
+        // simulation starts
+        
+        @(posedge clk);
+        #(CLK_PERIOD*3);
+        
+        @(posedge clk);
+        a <= 0;
+        b <= 0;
+        c_in <= 0;
+        
+        @(posedge clk);
+        a <= 0;
+        b <= 0;
+        c_in <= 1;
+        
+        #(CLK_PERIOD*2);
+        @(posedge clk);
+        a <= 1;
+        b <= 1;
+        c_in <= 0;
+        
+        @(posedge clk);
+        a <= 1;
+        b <= 1;
+        c_in <= 1;
+                       
+     end
+     
  endmodule
