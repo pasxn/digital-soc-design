@@ -1,2 +1,2 @@
-# digital-vlsi-design
-Studying digital VLSI design roadmap
+# Digital-SoC-Design
+Studying digital SoC design roadmap
