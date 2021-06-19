@@ -7,7 +7,12 @@ module counter_tb
   wire [WIDTH-1:0] count;
   wire ovflw;
 
-  counter #(WIDTH) DUT (.clk(clk), .rst_n(rst_n), .act(act), .up_dwn_n(up_dwn_n), count(count), .ovflw(ovflw));
+  counter #(WIDTH) DUT (.clk(clk), 
+                        .rst_n(rst_n), 
+                        .act(act), 
+                        .up_dwn_n(up_dwn_n), 
+                        .count(count), 
+                        .ovflw(ovflw));
 
   initial begin
     clk = 1'b1;
