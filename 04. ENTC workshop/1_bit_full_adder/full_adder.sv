@@ -3,9 +3,9 @@ module full_adder (
     input logic b,
     input logic c_in,
     output logic sum,
-    output logic C_out
+    output logic c_out
 );
-    logic wire1, wire2, wire3;
+    logic wire_1, wire_2, wire_3;
 
     assign wire_1 = a ^ b;
     assign wire_2 = wire_1 & c_in;

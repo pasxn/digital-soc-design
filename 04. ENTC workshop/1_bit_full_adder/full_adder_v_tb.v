@@ -5,13 +5,12 @@
      
      initial begin
         clk = 1'b0;
-        #(CLK_PERIOD/2) 
-        clk <= ~clk;
+        forever #(CLK_PERIOD/2) clk <= ~clk;
      end
      
-     reg a = 0;
-     reg b;
-     reg c_in = 0;
+     reg a = 1'b0;
+     reg b = 1'b0;
+     reg c_in = 1'b0;
      wire sum;
      wire c_out;
 

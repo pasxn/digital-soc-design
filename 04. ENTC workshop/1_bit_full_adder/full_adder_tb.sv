@@ -11,12 +11,12 @@
      end
      
      logic a = 0;
-     logic b;
+     logic b = 0;
      logic c_in = 0;
      logic sum;
      logic c_out;
      
-     full_adder(.*);
+     full_adder fa(.*);
      
      initial begin
         // simulation starts
