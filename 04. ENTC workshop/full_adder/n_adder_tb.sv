@@ -37,15 +37,15 @@ module n_adder_tb();
         c_in <= 0;
 
         repeat(10) begin
-            @(posedge clk);
-            std::randomize(A) with {
-                A inside {[-128:127]}
-            };
-            @(posedge clk);
-            std::randomize(B) with {
-                B inside {[-128:127]}
-            };
-            std::randomize(c_in);
-        end   
+          @(posedge clk);
+          std::randomize(A) with {
+            A inside {[-128:127]};
+          };
+          std::randomize(B) with {
+            B inside {[-128:127]};
+          };
+          std::randomize(c_in);
+        end
+ 
     end
 endmodule

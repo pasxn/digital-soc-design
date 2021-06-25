@@ -14,7 +14,7 @@ module n_adder
 
     generate
         for (genvar i=0; i<N; i++) begin:add
-            full_adder fa (
+            full_adder_v fa (
                 .a      (A[i]),
                 .b      (B[i]),
                 .c_in   (C[i]),
