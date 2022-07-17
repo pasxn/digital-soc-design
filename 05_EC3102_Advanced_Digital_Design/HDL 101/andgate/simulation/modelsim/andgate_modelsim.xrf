@@ -1,0 +1,13 @@
+vendor_name = ModelSim
+source_file = 1, G:/My Drive/Year 3/Semester 2/ADD/rtl-design-and-verification/05_EC3102_Advanced_Digital_Design/HDL 101/andgate/andgate.vhd
+source_file = 1, G:/My Drive/Year 3/Semester 2/ADD/rtl-design-and-verification/05_EC3102_Advanced_Digital_Design/HDL 101/andgate/Waveform.vwf
+source_file = 1, G:/My Drive/Year 3/Semester 2/ADD/rtl-design-and-verification/05_EC3102_Advanced_Digital_Design/HDL 101/andgate/db/andgate.cbx.xml
+source_file = 1, e:/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, e:/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, e:/altera/13.0sp1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, e:/altera/13.0sp1/quartus/libraries/vhdl/ieee/timing_p.vhd
+design_name = andgate
+instance = comp, \ii1~I , ii1, andgate, 1
+instance = comp, \ii2~I , ii2, andgate, 1
+instance = comp, \o~0 , o~0, andgate, 1
+instance = comp, \o~I , o, andgate, 1

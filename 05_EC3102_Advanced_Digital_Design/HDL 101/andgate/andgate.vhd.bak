@@ -1,0 +1,13 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity andgate is 
+	port (
+		i1, i2 : in std_logic;
+		o      : out std_logic
+	);
+end entity andgate;
+
+architecture rtl of andgate is begin 
+	o <= i1 and l2;
+end architecture rtl; 

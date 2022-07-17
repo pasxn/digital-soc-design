@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dG:\My Drive\Year 3\Semester 2\ADD\rtl-design-and-verification\05_EC3102_Advanced_Digital_Design\HDL 101\andgate\simulation\qsim
+vandgate
+Z1 !s100 i0=2eJNQiDcBQ9]No7Nk20
+Z2 IhSnLd@dLcIgGSoj?lR;4J0
+Z3 V0AL_BO8gd_][Tm1[BOM862
+Z4 dG:\My Drive\Year 3\Semester 2\ADD\rtl-design-and-verification\05_EC3102_Advanced_Digital_Design\HDL 101\andgate\simulation\qsim
+Z5 w1658059789
+Z6 8andgate.vo
+Z7 Fandgate.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|andgate.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1658059792.443000
+Z12 !s107 andgate.vo|
+!s101 -O0
+vandgate_vlg_check_tst
+!i10b 1
+Z13 !s100 TUk1GjCFRG<?iclEcW1IA1
+Z14 IiTz_imTRKJ^28;IM7La7R2
+Z15 V=:cF>D>ciaf`F0RPoEARB3
+R4
+Z16 w1658059785
+Z17 8andgate.vt
+Z18 Fandgate.vt
+L0 59
+R8
+r1
+!s85 0
+31
+Z19 !s108 1658059793.925000
+Z20 !s107 andgate.vt|
+Z21 !s90 -work|work|andgate.vt|
+!s101 -O0
+R10
+vandgate_vlg_sample_tst
+!i10b 1
+Z22 !s100 ;2o_33ihN=@m>AKiablX60
+Z23 IQD?I95=d:7KKXIf8B3oP22
+Z24 VnI=1L0B=LSAd]1L<bPhK21
+R4
+R16
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+vandgate_vlg_vec_tst
+!i10b 1
+!s100 j<b?PZPJS1`a?YIPM[6YP0
+IY1iPoBRalenVL7[EoTIUX2
+Z25 V3IBkYm4?zeLmb0Y8BnL1d2
+R4
+R16
+R17
+R18
+Z26 L0 154
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
