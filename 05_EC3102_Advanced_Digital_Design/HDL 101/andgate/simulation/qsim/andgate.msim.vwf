@@ -32,7 +32,7 @@ HEADER
 	GRID_DUTY_CYCLE = 50;
 }
 
-SIGNAL("andgate_vlg_vec_tst|ii1")
+SIGNAL("andgate_vlg_vec_tst|a")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -42,7 +42,7 @@ SIGNAL("andgate_vlg_vec_tst|ii1")
 	PARENT = "";
 }
 
-SIGNAL("andgate_vlg_vec_tst|ii2")
+SIGNAL("andgate_vlg_vec_tst|b")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -52,7 +52,7 @@ SIGNAL("andgate_vlg_vec_tst|ii2")
 	PARENT = "";
 }
 
-SIGNAL("andgate_vlg_vec_tst|o")
+SIGNAL("andgate_vlg_vec_tst|c")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -132,7 +132,7 @@ SIGNAL("andgate_vlg_vec_tst|i1|devoe")
 	PARENT = "";
 }
 
-SIGNAL("andgate_vlg_vec_tst|i1|ii1~combout")
+SIGNAL("andgate_vlg_vec_tst|i1|a~combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -142,7 +142,7 @@ SIGNAL("andgate_vlg_vec_tst|i1|ii1~combout")
 	PARENT = "";
 }
 
-SIGNAL("andgate_vlg_vec_tst|i1|ii2~combout")
+SIGNAL("andgate_vlg_vec_tst|i1|b~combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -152,7 +152,7 @@ SIGNAL("andgate_vlg_vec_tst|i1|ii2~combout")
 	PARENT = "";
 }
 
-SIGNAL("andgate_vlg_vec_tst|i1|o~0_combout")
+SIGNAL("andgate_vlg_vec_tst|i1|c~0_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -162,38 +162,37 @@ SIGNAL("andgate_vlg_vec_tst|i1|o~0_combout")
 	PARENT = "";
 }
 
-TRANSITION_LIST("andgate_vlg_vec_tst|ii1")
+TRANSITION_LIST("andgate_vlg_vec_tst|a")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 2000.0;
+		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 12000.0;
+	}
+}
+
+TRANSITION_LIST("andgate_vlg_vec_tst|b")
 {
 	NODE
 	{
 		REPEAT = 1;
 		LEVEL 0 FOR 2000.0;
-		LEVEL 1 FOR 2000.0;
-		LEVEL 0 FOR 12000.0;
+		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 13000.0;
 	}
 }
 
-TRANSITION_LIST("andgate_vlg_vec_tst|ii2")
+TRANSITION_LIST("andgate_vlg_vec_tst|c")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 2000.0;
 		LEVEL 1 FOR 1000.0;
-		LEVEL 0 FOR 1000.0;
-		LEVEL 1 FOR 1000.0;
-		LEVEL 0 FOR 12000.0;
-	}
-}
-
-TRANSITION_LIST("andgate_vlg_vec_tst|o")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 3000.0;
-		LEVEL 1 FOR 1000.0;
-		LEVEL 0 FOR 12000.0;
+		LEVEL 0 FOR 13000.0;
 	}
 }
 
@@ -264,44 +263,43 @@ TRANSITION_LIST("andgate_vlg_vec_tst|i1|devoe")
 	}
 }
 
-TRANSITION_LIST("andgate_vlg_vec_tst|i1|ii1~combout")
+TRANSITION_LIST("andgate_vlg_vec_tst|i1|a~combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 2000.0;
+		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 12000.0;
+	}
+}
+
+TRANSITION_LIST("andgate_vlg_vec_tst|i1|b~combout")
 {
 	NODE
 	{
 		REPEAT = 1;
 		LEVEL 0 FOR 2000.0;
-		LEVEL 1 FOR 2000.0;
-		LEVEL 0 FOR 12000.0;
+		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 13000.0;
 	}
 }
 
-TRANSITION_LIST("andgate_vlg_vec_tst|i1|ii2~combout")
+TRANSITION_LIST("andgate_vlg_vec_tst|i1|c~0_combout")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 2000.0;
 		LEVEL 1 FOR 1000.0;
-		LEVEL 0 FOR 1000.0;
-		LEVEL 1 FOR 1000.0;
-		LEVEL 0 FOR 12000.0;
-	}
-}
-
-TRANSITION_LIST("andgate_vlg_vec_tst|i1|o~0_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 3000.0;
-		LEVEL 1 FOR 1000.0;
-		LEVEL 0 FOR 12000.0;
+		LEVEL 0 FOR 13000.0;
 	}
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "andgate_vlg_vec_tst|ii1";
+	CHANNEL = "andgate_vlg_vec_tst|a";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 0;
@@ -310,7 +308,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "andgate_vlg_vec_tst|ii2";
+	CHANNEL = "andgate_vlg_vec_tst|b";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 1;
@@ -319,7 +317,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "andgate_vlg_vec_tst|o";
+	CHANNEL = "andgate_vlg_vec_tst|c";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 2;
@@ -391,7 +389,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "andgate_vlg_vec_tst|i1|ii1~combout";
+	CHANNEL = "andgate_vlg_vec_tst|i1|a~combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 10;
@@ -400,7 +398,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "andgate_vlg_vec_tst|i1|ii2~combout";
+	CHANNEL = "andgate_vlg_vec_tst|i1|b~combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 11;
@@ -409,7 +407,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "andgate_vlg_vec_tst|i1|o~0_combout";
+	CHANNEL = "andgate_vlg_vec_tst|i1|c~0_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 12;
