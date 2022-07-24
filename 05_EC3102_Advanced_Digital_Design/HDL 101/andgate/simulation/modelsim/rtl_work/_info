@@ -1,0 +1,75 @@
+m255
+K3
+13
+cModel Technology
+Z0 dG:\My Drive\Year 3\Semester 2\ADD\rtl-design-and-verification\05_EC3102_Advanced_Digital_Design\HDL 101\andgate\simulation\modelsim
+Eandgate
+Z1 w1658674704
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dG:\My Drive\Year 3\Semester 2\ADD\rtl-design-and-verification\05_EC3102_Advanced_Digital_Design\HDL 101\andgate\simulation\modelsim
+Z5 8G:/My Drive/Year 3/Semester 2/ADD/rtl-design-and-verification/05_EC3102_Advanced_Digital_Design/HDL 101/andgate/andgate.vhd
+Z6 FG:/My Drive/Year 3/Semester 2/ADD/rtl-design-and-verification/05_EC3102_Advanced_Digital_Design/HDL 101/andgate/andgate.vhd
+l0
+L4
+V[9K29go1>ACK7bV9JfK_A3
+Z7 OV;C;10.1d;51
+31
+Z8 !s108 1658674787.297000
+Z9 !s90 -reportprogress|300|-93|-work|work|G:/My Drive/Year 3/Semester 2/ADD/rtl-design-and-verification/05_EC3102_Advanced_Digital_Design/HDL 101/andgate/andgate.vhd|
+Z10 !s107 G:/My Drive/Year 3/Semester 2/ADD/rtl-design-and-verification/05_EC3102_Advanced_Digital_Design/HDL 101/andgate/andgate.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+!s100 fU>3=Z]P;FXbPeOG5n5kf3
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 7 andgate 0 22 [9K29go1>ACK7bV9JfK_A3
+l12
+L12
+VgXAQUo3D:b4VIc;oebGW>3
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 8hY_Y56gkh[YG]PQ<n4M<3
+!i10b 1
+Etestbench
+Z13 w1658674741
+R2
+R3
+R4
+Z14 8G:/My Drive/Year 3/Semester 2/ADD/rtl-design-and-verification/05_EC3102_Advanced_Digital_Design/HDL 101/andgate/andgate_test.vhd
+Z15 FG:/My Drive/Year 3/Semester 2/ADD/rtl-design-and-verification/05_EC3102_Advanced_Digital_Design/HDL 101/andgate/andgate_test.vhd
+l0
+L5
+VF5_@JAI1[PWcQB>PG]hVX0
+!s100 >[oUzEEL5GZ^P:Bhf@KRU2
+R7
+32
+!i10b 1
+Z16 !s108 1658674805.915000
+Z17 !s90 -reportprogress|300|-work|work|G:/My Drive/Year 3/Semester 2/ADD/rtl-design-and-verification/05_EC3102_Advanced_Digital_Design/HDL 101/andgate/andgate_test.vhd|
+Z18 !s107 G:/My Drive/Year 3/Semester 2/ADD/rtl-design-and-verification/05_EC3102_Advanced_Digital_Design/HDL 101/andgate/andgate_test.vhd|
+Z19 o-work work -O0
+R12
+Atb
+R2
+R3
+DEx4 work 9 testbench 0 22 F5_@JAI1[PWcQB>PG]hVX0
+l22
+L9
+Veb`I:_9VcKU68D<3zGRn=3
+!s100 >@PdXX2YdY][eRhmd_:Vk2
+R7
+32
+!i10b 1
+R16
+R17
+R18
+R19
+R12

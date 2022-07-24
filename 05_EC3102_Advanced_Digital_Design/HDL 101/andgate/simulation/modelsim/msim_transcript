@@ -1,0 +1,41 @@
+# Reading E:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do andgate_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying E:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied E:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {G:/My Drive/Year 3/Semester 2/ADD/rtl-design-and-verification/05_EC3102_Advanced_Digital_Design/HDL 101/andgate/andgate.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity andgate
+# -- Compiling architecture rtl of andgate
+# 
+vcom -reportprogress 300 -work work {G:/My Drive/Year 3/Semester 2/ADD/rtl-design-and-verification/05_EC3102_Advanced_Digital_Design/HDL 101/andgate/andgate_test.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity testbench
+# -- Compiling architecture tb of testbench
+vsim work.testbench
+# vsim work.testbench 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.testbench(tb)
+# Loading work.andgate(rtl)
+add wave -position end  sim:/testbench/a_in
+add wave -position end  sim:/testbench/b_in
+add wave -position end  sim:/testbench/q_out
+run
+run -all
+# ** Note: Test done.
+#    Time: 4 ns  Iteration: 0  Instance: /testbench
