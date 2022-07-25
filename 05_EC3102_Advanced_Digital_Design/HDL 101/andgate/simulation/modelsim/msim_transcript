@@ -1,5 +1,5 @@
 # Reading E:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
-# do andgate_run_msim_rtl_vhdl.do 
+# do andgate_run_msim_rtl_verilog.do 
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
 # }
@@ -10,32 +10,24 @@
 # ** Warning: Copied E:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vcom -93 -work work {G:/My Drive/Year 3/Semester 2/ADD/rtl-design-and-verification/05_EC3102_Advanced_Digital_Design/HDL 101/andgate/andgate.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity andgate
-# -- Compiling architecture rtl of andgate
+# vlog -vlog01compat -work work +incdir+G:/My\ Drive/Year\ 3/Semester\ 2/ADD/rtl-design-and-verification/05_EC3102_Advanced_Digital_Design/HDL\ 101/andgate {G:/My Drive/Year 3/Semester 2/ADD/rtl-design-and-verification/05_EC3102_Advanced_Digital_Design/HDL 101/andgate/andgate.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module andgate
 # 
-vcom -reportprogress 300 -work work {G:/My Drive/Year 3/Semester 2/ADD/rtl-design-and-verification/05_EC3102_Advanced_Digital_Design/HDL 101/andgate/andgate_test.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity testbench
-# -- Compiling architecture tb of testbench
-vsim work.testbench
-# vsim work.testbench 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.testbench(tb)
-# Loading work.andgate(rtl)
-add wave -position end  sim:/testbench/a_in
-add wave -position end  sim:/testbench/b_in
-add wave -position end  sim:/testbench/q_out
-run
-run -all
-# ** Note: Test done.
-#    Time: 4 ns  Iteration: 0  Instance: /testbench
+# Top level modules:
+# 	andgate
+# 
+vlog -reportprogress 300 -work work {G:/My Drive/Year 3/Semester 2/ADD/rtl-design-and-verification/05_EC3102_Advanced_Digital_Design/HDL 101/andgate/andgate_tb.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module andgate_tb
+# 
+# Top level modules:
+# 	andgate_tb
+vsim work.andgate_tb
+# vsim work.andgate_tb 
+# Loading work.andgate_tb
+# Loading work.andgate
+# ** Error: (vsim-3063) G:/My Drive/Year 3/Semester 2/ADD/rtl-design-and-verification/05_EC3102_Advanced_Digital_Design/HDL 101/andgate/andgate_tb.v(7): Port 'y' not found in the connected module (3rd connection).
+# 
+#         Region: /andgate_tb/my_gate
+# Error loading design
