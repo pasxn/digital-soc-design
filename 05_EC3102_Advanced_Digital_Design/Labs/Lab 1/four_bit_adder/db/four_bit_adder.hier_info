@@ -1,0 +1,121 @@
+|four_bit_adder
+a_data[3] => full_adder:fa0.x
+a_data[2] => full_adder:fa1.x
+a_data[1] => full_adder:fa2.x
+a_data[0] => full_adder:fa3.x
+b_data[3] => full_adder:fa0.y
+b_data[2] => full_adder:fa1.y
+b_data[1] => full_adder:fa2.y
+b_data[0] => full_adder:fa3.y
+c_in => full_adder:fa0.z
+s_data[3] <= full_adder:fa0.s
+s_data[2] <= full_adder:fa1.s
+s_data[1] <= full_adder:fa2.s
+s_data[0] <= full_adder:fa3.s
+c_out <= full_adder:fa3.c
+
+
+|four_bit_adder|full_adder:fa0
+x => half_adder:ha1.x
+y => half_adder:ha1.y
+z => half_adder:ha2.y
+s <= half_adder:ha2.Sh
+c <= c~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|four_bit_adder|full_adder:fa0|half_adder:ha1
+x => Sh~0.IN0
+x => Ch~0.IN0
+Y => Sh~0.IN1
+Y => Ch~0.IN1
+Sh <= Sh~0.DB_MAX_OUTPUT_PORT_TYPE
+Ch <= Ch~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|four_bit_adder|full_adder:fa0|half_adder:ha2
+x => Sh~0.IN0
+x => Ch~0.IN0
+Y => Sh~0.IN1
+Y => Ch~0.IN1
+Sh <= Sh~0.DB_MAX_OUTPUT_PORT_TYPE
+Ch <= Ch~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|four_bit_adder|full_adder:fa1
+x => half_adder:ha1.x
+y => half_adder:ha1.y
+z => half_adder:ha2.y
+s <= half_adder:ha2.Sh
+c <= c~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|four_bit_adder|full_adder:fa1|half_adder:ha1
+x => Sh~0.IN0
+x => Ch~0.IN0
+Y => Sh~0.IN1
+Y => Ch~0.IN1
+Sh <= Sh~0.DB_MAX_OUTPUT_PORT_TYPE
+Ch <= Ch~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|four_bit_adder|full_adder:fa1|half_adder:ha2
+x => Sh~0.IN0
+x => Ch~0.IN0
+Y => Sh~0.IN1
+Y => Ch~0.IN1
+Sh <= Sh~0.DB_MAX_OUTPUT_PORT_TYPE
+Ch <= Ch~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|four_bit_adder|full_adder:fa2
+x => half_adder:ha1.x
+y => half_adder:ha1.y
+z => half_adder:ha2.y
+s <= half_adder:ha2.Sh
+c <= c~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|four_bit_adder|full_adder:fa2|half_adder:ha1
+x => Sh~0.IN0
+x => Ch~0.IN0
+Y => Sh~0.IN1
+Y => Ch~0.IN1
+Sh <= Sh~0.DB_MAX_OUTPUT_PORT_TYPE
+Ch <= Ch~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|four_bit_adder|full_adder:fa2|half_adder:ha2
+x => Sh~0.IN0
+x => Ch~0.IN0
+Y => Sh~0.IN1
+Y => Ch~0.IN1
+Sh <= Sh~0.DB_MAX_OUTPUT_PORT_TYPE
+Ch <= Ch~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|four_bit_adder|full_adder:fa3
+x => half_adder:ha1.x
+y => half_adder:ha1.y
+z => half_adder:ha2.y
+s <= half_adder:ha2.Sh
+c <= c~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|four_bit_adder|full_adder:fa3|half_adder:ha1
+x => Sh~0.IN0
+x => Ch~0.IN0
+Y => Sh~0.IN1
+Y => Ch~0.IN1
+Sh <= Sh~0.DB_MAX_OUTPUT_PORT_TYPE
+Ch <= Ch~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|four_bit_adder|full_adder:fa3|half_adder:ha2
+x => Sh~0.IN0
+x => Ch~0.IN0
+Y => Sh~0.IN1
+Y => Ch~0.IN1
+Sh <= Sh~0.DB_MAX_OUTPUT_PORT_TYPE
+Ch <= Ch~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
