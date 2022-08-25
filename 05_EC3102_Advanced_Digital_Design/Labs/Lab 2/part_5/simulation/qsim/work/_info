@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dG:\My Drive\Year 3\Semester 2\ADD\rtl-design-and-verification\05_EC3102_Advanced_Digital_Design\Labs\Lab 2\part_5\simulation\qsim
+vpart_5
+Z1 IaM]4If_F_A1B=hQ4WW^[o3
+Z2 VDgzi@Rz[z[M`BGn9E>Sf?1
+Z3 dG:\My Drive\Year 3\Semester 2\ADD\rtl-design-and-verification\05_EC3102_Advanced_Digital_Design\Labs\Lab 2\part_5\simulation\qsim
+Z4 w1661443725
+Z5 8part_5.vo
+Z6 Fpart_5.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|part_5.vo|
+Z9 o-work work -O0
+!i10b 1
+Z10 !s100 EBk1J>c^ccJKJZAPRe8Cd3
+!s85 0
+Z11 !s108 1661443727.809000
+Z12 !s107 part_5.vo|
+!s101 -O0
+vpart_5_vlg_check_tst
+!i10b 1
+Z13 !s100 XFIoh:7P4gP3I:cZD0NM^1
+Z14 IQ=[CPDA8952ZJ6<kTnCoV0
+Z15 Vb1C[8VMG7[7T<gBW]DBSm2
+R3
+Z16 w1661443724
+Z17 8part_5.vt
+Z18 Fpart_5.vt
+L0 57
+R7
+r1
+!s85 0
+31
+Z19 !s108 1661443728.090000
+Z20 !s107 part_5.vt|
+Z21 !s90 -work|work|part_5.vt|
+!s101 -O0
+R9
+vpart_5_vlg_sample_tst
+!i10b 1
+Z22 !s100 81Y:k>mi3F423ZT=ASK4O0
+Z23 I9UAGlUYP5MB_f7I^=@c]40
+Z24 VdZIU5QiIAmX?===FRf_E_0
+R3
+R16
+R17
+R18
+L0 29
+R7
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R9
+vpart_5_vlg_vec_tst
+!i10b 1
+Z25 !s100 YVem?DffHD7E^`mYM;^B_1
+Z26 I:KFQ?Xd;]bz5kzThYY5hL0
+Z27 V7giJ1B@QCoDdi^^PK:SE42
+R3
+R16
+R17
+R18
+Z28 L0 795
+R7
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R9

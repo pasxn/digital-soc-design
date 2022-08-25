@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dG:\My Drive\Year 3\Semester 2\ADD\rtl-design-and-verification\05_EC3102_Advanced_Digital_Design\Labs\Lab 2\part_4\simulation\qsim
+vseven_segment_decoder
+Z1 !s100 oD>Vb`6o>@^cU2dU`Idfg0
+Z2 I^YjadOCgh`lFE>[Em9<Mg3
+Z3 VHa<K:l0[o^f=0]`0D;IR_3
+Z4 dG:\My Drive\Year 3\Semester 2\ADD\rtl-design-and-verification\05_EC3102_Advanced_Digital_Design\Labs\Lab 2\part_4\simulation\qsim
+Z5 w1661437183
+Z6 8seven_segment_decoder.vo
+Z7 Fseven_segment_decoder.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|seven_segment_decoder.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1661437184.904000
+Z12 !s107 seven_segment_decoder.vo|
+!s101 -O0
+vseven_segment_decoder_vlg_check_tst
+!i10b 1
+Z13 !s100 Eg;Qe:o=8l5h2g`g1A?kf0
+Z14 Ih5PkZiBl>3@?_V_49mi0A3
+Z15 VdX>20e_9facSNAFIOK@Jb3
+R4
+Z16 w1661437181
+Z17 8seven_segment_decoder.vt
+Z18 Fseven_segment_decoder.vt
+L0 57
+R8
+r1
+!s85 0
+31
+Z19 !s108 1661437185.166000
+Z20 !s107 seven_segment_decoder.vt|
+Z21 !s90 -work|work|seven_segment_decoder.vt|
+!s101 -O0
+R10
+vseven_segment_decoder_vlg_sample_tst
+!i10b 1
+Z22 !s100 NRoAag_Mg9>1;S2PXae=N1
+Z23 ILQEmoZ:W`2;Vdz0ZnDkWX2
+Z24 VFM4]Ba@::QZ4hAYE3A`G43
+R4
+R16
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+vseven_segment_decoder_vlg_vec_tst
+!i10b 1
+!s100 AzM?L<@Ll<c>=5:l4^A]@2
+IN34XKf9YS5Z4>TS40g`YW2
+Z25 VRn1f7XNeKE=XUN6nH@]l=1
+R4
+R16
+R17
+R18
+Z26 L0 259
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10

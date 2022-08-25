@@ -1,0 +1,13 @@
+|seven_segment_decoder
+C[0] => ~NO_FANOUT~
+C[1] => ~NO_FANOUT~
+C[2] => ~NO_FANOUT~
+O[0] <= <GND>
+O[1] <= <GND>
+O[2] <= <GND>
+O[3] <= <GND>
+O[4] <= <GND>
+O[5] <= <GND>
+O[6] <= <GND>
+
+

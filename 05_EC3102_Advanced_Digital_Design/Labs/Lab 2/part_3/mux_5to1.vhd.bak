@@ -1,0 +1,19 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+entity mux_5to1 is
+	port(u, v, w, x, y : in std_logic;
+		  S : in std_logic_vector(2 downto 0);
+		  m : in std_logic);
+end mux_5to1;
+
+architecture rtl of mux_5to1 is 
+
+component mux_2to1 
+
+begin
+
+end rtl;
+	

@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dG:\My Drive\Year 3\Semester 2\ADD\rtl-design-and-verification\05_EC3102_Advanced_Digital_Design\Labs\Lab 2\part_3\simulation\qsim
+vmux_5to1
+Z1 !s100 hUY:<bAPAC9hLS5W;N=[<2
+Z2 I:0Q_NdOVO^aR4P4CR03SN1
+Z3 VCnJUdVJ<PZHReVcKV;Z?Q3
+Z4 dG:\My Drive\Year 3\Semester 2\ADD\rtl-design-and-verification\05_EC3102_Advanced_Digital_Design\Labs\Lab 2\part_3\simulation\qsim
+Z5 w1661426992
+Z6 8mux_5to1.vo
+Z7 Fmux_5to1.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|mux_5to1.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1661426994.089000
+Z12 !s107 mux_5to1.vo|
+!s101 -O0
+vmux_5to1_vlg_check_tst
+!i10b 1
+Z13 !s100 A7ZGdhD;Nl7zlCm3SfcNV1
+Z14 IV`M_l0T0Tnc0=oJV=c<8A0
+Z15 Vjm3zh>Tc[NUkJ<=iPn[YP3
+R4
+Z16 w1661426991
+Z17 8mux_5to1.vt
+Z18 Fmux_5to1.vt
+L0 67
+R8
+r1
+!s85 0
+31
+Z19 !s108 1661426994.312000
+Z20 !s107 mux_5to1.vt|
+Z21 !s90 -work|work|mux_5to1.vt|
+!s101 -O0
+R10
+vmux_5to1_vlg_sample_tst
+!i10b 1
+Z22 !s100 Wgmhfjl6_3ndBaf`InS?92
+Z23 I?K^^6Y<Y?_UXJKEMd5RBB1
+Z24 V`n<0TaO0mZ?zHM3M>meh;1
+R4
+R16
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+vmux_5to1_vlg_vec_tst
+!i10b 1
+!s100 7X:i2`J:FL5`g=;K[X_[j3
+I8E;HS1JiX_2V02OXgXPM43
+Z25 V_X5NQaDcj7;QGNPEPdf=12
+R4
+R16
+R17
+R18
+Z26 L0 197
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
