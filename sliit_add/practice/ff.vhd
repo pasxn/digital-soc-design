@@ -12,7 +12,7 @@ architecture rtl of ff is
 begin
     proc : process(clk)
     begin
-        if(clr = '1') then
+        if(clk = '1') then
             q <= d; 
         end if;
     end process proc;
