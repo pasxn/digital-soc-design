@@ -14,14 +14,17 @@ module vend (
   output  reg [7:0]           change_tokens
 );
 
-localparam  WAIT_VEND         = 3'd0;
-localparam  TOKEN_ONE         = 3'd1;
-localparam  TOKEN_TWO         = 3'd2;
-localparam  TOKEN_THREE       = 3'd3;
-localparam  PLAIN_COFFEE      = 3'd4;
-localparam  HAZELNUT_COFFEE   = 3'd5;
-localparam  COCONUT_COFFEE    = 3'd6;
-localparam  NO_OPERATION      = 3'd7;
+localparam  WAIT_VEND               = 4'd0;
+localparam  TOKEN_ONE               = 4'd1;
+localparam  TOKEN_TWO               = 4'd2;
+localparam  TOKEN_THREE             = 4'd3;
+localparam  PLAIN_COFFEE            = 4'd4;
+localparam  PLAIN_COFFEE_CHANGE     = 4'd5;
+localparam  HAZELNUT_COFFEE         = 4'd6;
+localparam  HAZELNUT_COFFEE_CHANGE  = 4'd7;
+localparam  COCONUT_COFFEE          = 4'd8;
+localparam  COCONUT_COFFEE_CHANGE   = 4'd9;
+localparam  NO_OPERATION            = 4'd10;
 
 reg [7:0]   state             = WAIT_VEND;
 reg [7:0]   num_tokens        = 0;
@@ -104,9 +107,12 @@ always @(posedge clk) begin
         else if(dispense_done) begin
           dispense      <= 0;
           num_tokens    <= num_tokens - 1;
-          change_tokens <= num_tokens;
-          state         <= WAIT_VEND;
+          state         <= PLAIN_COFFEE_CHANGE;
         end
+      end
+      PLAIN_COFFEE_CHANGE: begin
+        change_tokens <= num_tokens;
+        state         <= WAIT_VEND;
       end
       HAZELNUT_COFFEE: begin
         coffee_select <= 2'b10;
@@ -120,9 +126,12 @@ always @(posedge clk) begin
         else if(dispense_done) begin
           dispense      <= 0;
           num_tokens    <= num_tokens - 2;
-          change_tokens <= num_tokens;
-          state         <= WAIT_VEND;
+          state         <= HAZELNUT_COFFEE_CHANGE;
         end
+      end
+      HAZELNUT_COFFEE_CHANGE: begin
+        change_tokens <= num_tokens;
+        state         <= WAIT_VEND;
       end
       COCONUT_COFFEE: begin
         coffee_select <= 2'b11;
@@ -136,16 +145,19 @@ always @(posedge clk) begin
         else if(dispense_done) begin
           dispense      <= 0;
           num_tokens    <= num_tokens - 3;
-          change_tokens <= num_tokens;
-          state         <= WAIT_VEND;
+          state         <= COCONUT_COFFEE_CHANGE;
         end
+      end
+      COCONUT_COFFEE_CHANGE: begin
+        change_tokens <= num_tokens;
+        state         <= WAIT_VEND;
       end
       NO_OPERATION: begin
         if(token_in) begin
           num_tokens <= num_tokens + 1;
           state <= NO_OPERATION;
         end
-        if(button_pc | button_hc | button_cc | dispense_done) begin
+        else if(button_pc | button_hc | button_cc | dispense_done) begin
           change_tokens <= num_tokens;
           state <= WAIT_VEND;
         end
