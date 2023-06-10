@@ -9,8 +9,9 @@ module vend (
   input   wire                button_cc,
   input   wire                token_in,
   input   wire                dispense_done,
+  output  reg                 dispense,
   output  reg [2:0]           coffee_select,
-  output  reg [2:0]           change_tokens
+  output  reg [7:0]           change_tokens
 );
 
 localparam  WAIT_VEND         = 3'd0;
@@ -27,15 +28,17 @@ reg [7:0]   num_tokens        = 0;
 
 always @(posedge clk) begin
   if (reset) begin
-    coffee_select_done  <= 0;
-    coffee_select       <= 0
+    dispense            <= 0;
+    coffee_select       <= 0;
+    change_tokens       <= 0;
     state               <= WAIT_VEND;
   end
   else begin
     case(state)
       WAIT_VEND: begin
-        coffee_select_done  <= 0;
-        coffee_select       <= 0
+        dispense            <= 0;
+        coffee_select       <= 0;
+        change_tokens       <= 0;
         if(token_in) begin
           num_tokens  <= num_tokens + 1;
           state       <= TOKEN_ONE;
@@ -91,7 +94,7 @@ always @(posedge clk) begin
       end
       PLAIN_COFFEE: begin
         coffee_select <= 2'b01;
-        change_tokens <= num_tokens - 1;
+        dispense      <= 1;
         if(button_pc | button_hc | button_cc ) begin
           state <= PLAIN_COFFEE;
         end
@@ -99,12 +102,15 @@ always @(posedge clk) begin
           state <= NO_OPERATION;
         end
         else if(dispense_done) begin
-          state < WAIT_VEND;
+          dispense      <= 0;
+          num_tokens    <= num_tokens - 1;
+          change_tokens <= num_tokens;
+          state         <= WAIT_VEND;
         end
       end
       HAZELNUT_COFFEE: begin
         coffee_select <= 2'b10;
-        change_tokens <= num_tokens - 2;
+        dispense      <= 1;
         if(button_pc | button_hc | button_cc ) begin
           state <= HAZELNUT_COFFEE;
         end
@@ -112,12 +118,15 @@ always @(posedge clk) begin
           state <= NO_OPERATION;
         end
         else if(dispense_done) begin
-          state < WAIT_VEND;
+          dispense      <= 0;
+          num_tokens    <= num_tokens - 2;
+          change_tokens <= num_tokens;
+          state         <= WAIT_VEND;
         end
       end
       COCONUT_COFFEE: begin
         coffee_select <= 2'b11;
-        change_tokens <= num_tokens - 3;
+        dispense      <= 1;
         if(button_pc | button_hc| button_cc ) begin
           state <= COCONUT_COFFEE;
         end
@@ -125,7 +134,10 @@ always @(posedge clk) begin
           state <= NO_OPERATION;
         end
         else if(dispense_done) begin
-          state < WAIT_VEND;
+          dispense      <= 0;
+          num_tokens    <= num_tokens - 3;
+          change_tokens <= num_tokens;
+          state         <= WAIT_VEND;
         end
       end
       NO_OPERATION: begin
@@ -134,24 +146,19 @@ always @(posedge clk) begin
           state <= NO_OPERATION;
         end
         if(button_pc | button_hc | button_cc | dispense_done) begin
-          state <= NO_OPERATION;
+          change_tokens <= num_tokens;
+          state <= WAIT_VEND;
         end
-        change_tokens <= num_tokens;
-        state <= WAIT_VEND;
       end 
-      defualt: begin
-        state <= WAIT_VEND;
-      end
     endcase
   end
 end
 
 // dump waves
-`ifdef DEBUG
-  initial begin
-    $dumpfile("vend.vcd");
-  end
-`endif
+initial begin
+  $dumpfile("vend.vcd");
+  $dumpvars(1, vend);
+end
 
 endmodule
 

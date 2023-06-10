@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1686395094" />
+    <testcase name="vend_tb" classname="vend_tb" file="/home/pasan/Dev/rtl-design-and-verification/vending_machine/sim/vend_tb.py" lineno="7" time="0.04623532295227051" sim_time_ns="3210.001" ratio_time="69427.45924612092" />
+  </testsuite>
+</testsuites>
