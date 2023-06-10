@@ -155,11 +155,12 @@ always @(posedge clk) begin
       NO_OPERATION: begin
         if(token_in) begin
           num_tokens <= num_tokens + 1;
-          state <= NO_OPERATION;
+          state       <= NO_OPERATION;
         end
         else if(button_pc | button_hc | button_cc | dispense_done) begin
           change_tokens <= num_tokens;
-          state <= WAIT_VEND;
+          num_tokens    <= 0;
+          state         <= WAIT_VEND;
         end
       end 
     endcase

@@ -165,3 +165,40 @@ async def vend_tb(dut):
 
   for i in range(50):
     await RisingEdge(dut.clk)
+
+
+
+  # input
+  dut.token_in.value        = 1
+  await RisingEdge(dut.clk)
+  dut.token_in.value        = 0
+  await RisingEdge(dut.clk)
+  dut.token_in.value        = 1
+  await RisingEdge(dut.clk)
+  dut.token_in.value        = 0
+  await RisingEdge(dut.clk)
+  dut.token_in.value        = 1
+  await RisingEdge(dut.clk)
+  dut.token_in.value        = 0
+  await RisingEdge(dut.clk)
+
+  for i in range(10):
+    await RisingEdge(dut.clk) 
+
+  # input
+  dut.button_pc.value        = 1
+  await RisingEdge(dut.clk)
+  dut.button_pc.value        = 0
+  await RisingEdge(dut.clk)
+
+  for i in range(10):
+    await RisingEdge(dut.clk)
+
+  # input
+  dut.dispense_done.value      = 1
+  await RisingEdge(dut.clk)
+  dut.dispense_done.value      = 0
+  await RisingEdge(dut.clk)
+
+  for i in range(50):
+    await RisingEdge(dut.clk)
