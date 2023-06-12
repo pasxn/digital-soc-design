@@ -9,6 +9,7 @@ module vend (
   input   wire                button_cc,
   input   wire                token_in,
   input   wire                dispense_done,
+  output  reg                 vend_busy,
   output  reg                 dispense,
   output  reg [2:0]           coffee_select,
   output  reg [7:0]           change_tokens
@@ -111,6 +112,10 @@ always @(posedge clk) begin
         end
       end
       PLAIN_COFFEE_CHANGE: begin
+        if(button_pc | button_hc | button_cc | dispense_done | token_in) begin
+          state       <= PLAIN_COFFEE_CHANGE;
+        end
+        vend_busy     <= 1;
         change_tokens <= num_tokens;
         state         <= WAIT_VEND;
       end
@@ -130,6 +135,10 @@ always @(posedge clk) begin
         end
       end
       HAZELNUT_COFFEE_CHANGE: begin
+        if(button_pc | button_hc | button_cc | dispense_done | token_in) begin
+          state       <= PLAIN_COFFEE_CHANGE;
+        end
+        vend_busy     <= 1;
         change_tokens <= num_tokens;
         state         <= WAIT_VEND;
       end
@@ -149,6 +158,10 @@ always @(posedge clk) begin
         end
       end
       COCONUT_COFFEE_CHANGE: begin
+        if(button_pc | button_hc | button_cc | dispense_done | token_in) begin
+          state       <= PLAIN_COFFEE_CHANGE;
+        end
+        vend_busy     <= 1;
         change_tokens <= num_tokens;
         state         <= WAIT_VEND;
       end
