@@ -35,6 +35,7 @@ always @(posedge clk) begin
     dispense            <= 0;
     coffee_select       <= 0;
     change_tokens       <= 0;
+    vend_busy           <= 0;
     state               <= WAIT_VEND;
   end
   else begin
@@ -43,6 +44,7 @@ always @(posedge clk) begin
         dispense            <= 0;
         coffee_select       <= 0;
         change_tokens       <= 0;
+        vend_busy           <= 0;
         if(token_in) begin
           num_tokens  <= num_tokens + 1;
           state       <= TOKEN_ONE;
