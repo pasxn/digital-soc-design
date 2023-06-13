@@ -119,6 +119,7 @@ always @(posedge clk) begin
         end
         vend_busy     <= 1;
         change_tokens <= num_tokens;
+        num_tokens    <= 0;
         state         <= WAIT_VEND;
       end
       HAZELNUT_COFFEE: begin
@@ -142,6 +143,7 @@ always @(posedge clk) begin
         end
         vend_busy     <= 1;
         change_tokens <= num_tokens;
+        num_tokens    <= 0;
         state         <= WAIT_VEND;
       end
       COCONUT_COFFEE: begin
@@ -165,6 +167,7 @@ always @(posedge clk) begin
         end
         vend_busy     <= 1;
         change_tokens <= num_tokens;
+        num_tokens    <= 0;
         state         <= WAIT_VEND;
       end
       NO_OPERATION: begin
