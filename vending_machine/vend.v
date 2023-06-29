@@ -172,7 +172,7 @@ always @(posedge clk) begin
       end
       NO_OPERATION: begin
         if(token_in) begin
-          num_tokens <= num_tokens + 1;
+          num_tokens  <= num_tokens + 1;
           state       <= NO_OPERATION;
         end
         else if(button_pc | button_hc | button_cc | dispense_done) begin
