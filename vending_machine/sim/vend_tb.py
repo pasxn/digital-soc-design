@@ -202,4 +202,4 @@ async def vend_tb(dut):
 
   for i in range(50):
     await RisingEdge(dut.clk)
-    
+      
